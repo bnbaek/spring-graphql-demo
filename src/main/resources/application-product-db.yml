@@ -1,0 +1,7 @@
+#spring.jpa.hibernate.ddl-auto: none
+#spring.datasource.url: [데이터베이스 url]
+#spring.datasource.username: [username]
+#spring.datasource.password: [password]
+#spring.datasource.driver-class-name: org.mariadb.jdbc.Driver
+#spring.datasource.schema: classpath*:db/productdb/schema.sql
+#spring.datasource.initialization-mode: always

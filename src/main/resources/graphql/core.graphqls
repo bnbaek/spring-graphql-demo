@@ -1,0 +1,9 @@
+# 루트 쿼리 (Root Query)
+type Query {
+    recentPosts(count: Int, offset: Int): [Post]!
+}
+
+# 루트 뮤테이션 (Root Mutation)
+type Mutation {
+    writePost(title: String!, text: String!, category: String) : Post!
+}

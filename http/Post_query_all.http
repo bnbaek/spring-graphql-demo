@@ -1,0 +1,12 @@
+# curl --location --request POST 'http://localhost:9090/graphql'
+#--header 'Content-Type: application/json'
+#--data-raw '{"query":"query {\n   recentPosts(count: 10,offset: 0) {\n       id\n       title\n   }\n}","variables":{}}'
+POST http://localhost:9090/graphql
+Content-Type: application/json
+
+{
+  "query": "query {\n   recentPosts(count: 10,offset: 0) {\n       id\n       title\n   }\n}"
+}
+
+###
+

@@ -1,0 +1,13 @@
+spring:
+  profiles:
+    include: product-db
+  jpa:
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+
+  session:
+    store-type: jdbc
+    jdbc:
+      table-name: SESSIONS
+
