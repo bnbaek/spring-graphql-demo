@@ -32,11 +32,5 @@ public class DsgMutationFetcher {
 
         return PostDto.Res.from(postRepository.save(post));
     }
-//    public List<Res> shows(@InputArgument("titleFilter") String titleFilter) {
-//        if (titleFilter == null) {
-//            return shows;
-//        }
-//        return shows.stream().filter(s -> s.getTitle().contains(titleFilter)).collect(Collectors.toList());
-//    }
 
 }
