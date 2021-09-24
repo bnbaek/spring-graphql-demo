@@ -23,7 +23,7 @@ logging:
 graphql:
   servlet:
     enabled: true
-    mapping: /graphql
+    mapping: /schema
     corsEnabled: false
     cors:
       allowed-origins: http://localhost:8080

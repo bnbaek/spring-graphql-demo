@@ -1,0 +1,21 @@
+type Post {
+    seq: ID!
+    id: String!
+    title: String!
+    text: String!
+    category: String
+    author: Author!
+    createdDate: LocalDateTime!
+}
+
+type Author {
+    seq: ID!
+    name: String!
+#    posts: [Post]!
+}
+
+input SubmittedPost {
+    title: String!
+    text: String!
+    category: String!
+}

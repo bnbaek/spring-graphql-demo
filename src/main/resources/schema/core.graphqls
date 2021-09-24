@@ -1,3 +1,8 @@
+
+scalar LocalDateTime
+
+#scalar LocalDateTime
+
 # 루트 쿼리 (Root Query)
 type Query {
     recentPosts(count: Int, offset: Int): [Post]!
@@ -5,5 +10,8 @@ type Query {
 
 # 루트 뮤테이션 (Root Mutation)
 type Mutation {
-    writePost(title: String!, text: String!, category: String) : Post!
+    writePost(post: SubmittedPost) : Post!
 }
+
+
+

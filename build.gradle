@@ -7,6 +7,7 @@ plugins {
 group = 'net.openu'
 version = '0.0.1-SNAPSHOT'
 sourceCompatibility = '1.8'
+//id("com.netflix.dgs.codegen") version "5.1.0"
 
 configurations {
     compileOnly {
@@ -21,8 +22,13 @@ repositories {
 dependencies {
     implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
     implementation 'org.springframework.boot:spring-boot-starter-web'
-    implementation 'com.graphql-java:graphql-spring-boot-starter:5.0.2'
-    implementation 'com.graphql-java:graphql-java-tools:5.2.4'
+//    implementation 'com.graphql-java:graphql-spring-boot-starter:5.0.2'
+//    implementation 'com.graphql-java:graphql-java-tools:5.2.4'
+    //    implementation 'com.graphql-java:graphql-java-extended-scalars:17.0.0'
+    implementation "com.netflix.graphql.dgs:graphql-dgs-spring-boot-starter:4.8.2"
+    implementation "com.netflix.graphql.dgs:graphql-dgs-extended-scalars:4.8.2"
+
+
     compileOnly 'org.projectlombok:lombok'
     runtimeOnly 'com.h2database:h2'
     annotationProcessor 'org.projectlombok:lombok'

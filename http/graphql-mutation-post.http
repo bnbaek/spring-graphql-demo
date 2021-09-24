@@ -1,0 +1,19 @@
+ curl --location --request POST 'http://localhost:9090/graphql'
+--header 'Content-Type: application/json'
+--data-raw '{"query":"mutation CreateArticle($input: SubmittedPost!) {\n  writePost(post: $input) {\n    id\n    title\n    author {\n      id\n    }\n  }\n}","variables":{"input":{"title":"h2","text":"g3","category":"1"}}}'
+POST http://localhost:9090/graphql
+Content-Type: application/json
+
+{
+  "query": "mutation CreateArticle($input: SubmittedPost!) {\n  writePost(post: $input) {\n    id\n    title\n    author {\n      id\n    }\n  }\n}",
+  "variables": {
+    "input": {
+      "title": "h2",
+      "text": "g3",
+      "category": "1"
+    }
+  }
+}
+
+###
+

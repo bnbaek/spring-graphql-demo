@@ -3,3 +3,42 @@ server:
 spring:
   profiles:
     active: local
+#  jackson:
+#    deserialization:
+#      adjust-dates-to-context-time-zone: false
+graphql:
+  graphiql:
+    enabled: true
+  datetime:
+    scalars:
+      date:
+        scalarName: MyDate
+      localDate:
+        scalarName: MyLocalDate
+
+#graphql:
+#  datetime:
+#    scalars:
+#      zone-conversion-enabled: true
+#      date:
+#        scalarName: MyDate
+#      localDate:
+#        scalarName: MyLocalDate
+#        format: yyyy-MM-dd
+#      localDateTime:
+#        scalarName: MyLocalDateTime
+#        format: yyyy-MM-dd'T'HH:mm:ss
+#      localTime:
+#        scalarName: MyLocalTime
+#      offsetDateTime:
+#        scalarName: MyOffsetDateTime
+#      yearMonth:
+#        scalarName: MyYearMonth
+#      duration:
+#        scalarName: MyDuration
+  #  datetime:
+  #    scalars:
+  #      localDate:
+  #        format: MM/dd/yyyy
+  #      localDateTime:
+  #        format: yyyy-MM-dd'T'HH:mm:ss

@@ -1,0 +1,28 @@
+mutation SubmmitedArticle($input: SubmittedPost!) {
+    writePost(post: $input) {
+        id
+        title
+        author {
+            seq
+        }
+    }
+}
+#{
+#"input": {
+#"title": "Writing GraphQL mutations with Spring boot",
+#"text": "This is the text for our blog article.",
+#"category": "1"
+#}
+#}
+
+
+
+###
+
+query {
+    recentPosts(count: 1,offset: 1){
+        id
+        seq
+    }
+
+}
