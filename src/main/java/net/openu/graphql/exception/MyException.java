@@ -1,6 +1,7 @@
 package net.openu.graphql.exception;
 
 import graphql.ErrorClassification;
+import graphql.ErrorType;
 import graphql.GraphQLError;
 import graphql.language.SourceLocation;
 import java.util.List;
@@ -18,6 +19,6 @@ public class MyException extends RuntimeException implements GraphQLError {
 
     @Override
     public ErrorClassification getErrorType() {
-        return null;
+        return ErrorType.DataFetchingException;
     }
 }

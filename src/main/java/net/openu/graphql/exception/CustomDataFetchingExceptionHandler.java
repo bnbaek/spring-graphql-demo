@@ -1,6 +1,7 @@
 package net.openu.graphql.exception;
 
 import com.netflix.graphql.dgs.exceptions.DefaultDataFetcherExceptionHandler;
+import com.netflix.graphql.types.errors.ErrorType;
 import com.netflix.graphql.types.errors.TypedGraphQLError;
 import graphql.GraphQLError;
 import graphql.execution.DataFetcherExceptionHandler;
@@ -25,9 +26,11 @@ public class CustomDataFetchingExceptionHandler implements DataFetcherExceptionH
             Map<String, Object> debugInfo = new HashMap<>();
             debugInfo.put("somefield", "somevalue");
 
-            GraphQLError graphqlError = TypedGraphQLError.INTERNAL.message("This custom thing went wrong!")
-                .debugInfo(debugInfo)
+            GraphQLError graphqlError = TypedGraphQLError.newBuilder()
+                .message(exception.getMessage())
+                .errorType(ErrorType.INTERNAL)
                 .path(handlerParameters.getPath()).build();
+
             return DataFetcherExceptionHandlerResult.newResult()
                 .error(graphqlError)
                 .build();
