@@ -19,7 +19,7 @@ logging:
   level:
     org:
       springframework.web: debug
-
+service.ipcheck.impl: localIpCheckServiceImpl
 graphql:
   servlet:
     enabled: true

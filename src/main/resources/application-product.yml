@@ -11,3 +11,4 @@ spring:
     jdbc:
       table-name: SESSIONS
 
+service.ipcheck.impl: productIpCheckServiceImpl
