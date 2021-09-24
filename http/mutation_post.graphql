@@ -1,4 +1,4 @@
-mutation SubmmitedArticle($input: SubmittedPost!) {
+mutation WritePost($input: SubmittedPost!) {
     writePost(post: $input) {
         id
         title
