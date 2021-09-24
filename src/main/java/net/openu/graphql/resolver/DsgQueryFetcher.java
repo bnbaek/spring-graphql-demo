@@ -28,11 +28,4 @@ public class DsgQueryFetcher {
     }
 
 
-//    public List<Res> shows(@InputArgument("titleFilter") String titleFilter) {
-//        if (titleFilter == null) {
-//            return shows;
-//        }
-//        return shows.stream().filter(s -> s.getTitle().contains(titleFilter)).collect(Collectors.toList());
-//    }
-
 }
